@@ -77,7 +77,7 @@ const Project = () => {
     {
         projects.map((item,i)=>{
             return(
-                <div className={`flex flex-col md:${i%2!==0 ? "flex-row-reverse":"flex-row"} px-3 md:px-8 py-3 md:py-8 bg-[#ffffff1f] rounded-2xl   gap-6  items-center `} key={item.id}>
+                <div className={`flex flex-col  ${i%2==0 ? "md:flex-row ":"md:flex-row-reverse"} px-3 md:px-8 py-3 md:py-8 bg-[#ffffff1f] rounded-2xl   gap-6  items-center `} key={item.id}>
             <div className={`w-full md:w-1/2  flex justify-center items-center `}>
                 <img className='rounded-lg object-cover' src={item.image.src} alt={item.image.alt} />
             </div>
