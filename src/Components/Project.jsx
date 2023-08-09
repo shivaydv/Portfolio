@@ -14,57 +14,64 @@ const Project = () => {
     const projects=[{
         id:1,
         name:'Chat App',
+        subheading:"MERN Stack Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:chat_p,alt:"Chat App"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/Chat-app",
+        live_demo:"https://shivaydv-chat-app.netlify.app/"
     },
     {
         id:2,
         name:'Crypto App',
+        subheading:"API Based Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:crypto_p,alt:"Crypto App"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/Crypto-App",
+        live_demo:"https://sy-crypto.netlify.app/"
     },{
         id:3,
         name:'To Do List',
+        subheading:"React Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:todolist_p,alt:"To Do List App"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/To-Do-List",
+        live_demo:"https://shivaydv-to-do-list.netlify.app/"
     },
     {
         id:4,
         name:'Tesla Clone',
+        subheading:"Basic Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:tesla_p,alt:"Tesla"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/Tesla",
+        live_demo:"https://shivaydv.github.io/Tesla/"
     },
     {
         id:5,
         name:'TVJ Store',
+        subheading:"React Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:tvj_p,alt:"TVJ Store"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/TVJ-Store",
+        live_demo:"https://shivaydv-ecom.netlify.app/"
     },
     {
         id:6,
         name:'Weather App',
+        subheading:"API Based Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:weather_p,alt:"Weather App"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/weather-app",
+        live_demo:"https://sy-weather-app.netlify.app/"
     },
     {
         id:7,
         name:'Solve Mind',
+        subheading:"React Project",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
         image:{src:solvemind_p,alt:"Solve Mind"},
-        github_link:"https://github.com/shivaydv",
-        live_demo:""
+        github_link:"https://github.com/shivaydv/SolveMind",
+        live_demo:"https://solvemind.netlify.app/"
     }]
 
 
@@ -81,15 +88,18 @@ const Project = () => {
             <div className={`w-full md:w-1/2  flex justify-center items-center `}>
                 <img className='rounded-lg object-cover' src={item.image.src} alt={item.image.alt} />
             </div>
-            <div className=' w-full md:w-1/2 space-y-6  justify-center flex flex-col '>
+            <div className=' w-full md:w-1/2 space-y-6  justify-center flex flex-col  '>
+                <div className='space-y-1'>
                 <h1 className='text-3xl font-semibold'>{item.name}</h1>
+                <p className='text-sm text-[#8d8d8d]'>{item.subheading}</p>
+                </div>
                 <p className='text-lg text-[#8d8d8d]'>{item.description}</p>
-                <div className='space-x-4'>
-                <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start">
-                    <a href={item.github_link}>View Demo</a>
+                <div className='md:space-x-4 flex justify-evenly w-full md:justify-start '>
+                <button className=" px-6 py-2 bg-[#fc1056] ease-in-out  hover:bg-[#fc105792] border border-[#fc1056] rounded-lg font-semibold md:self-start">
+                    <a href={item.github_link}>GitHub</a>
                 </button>
-                <button className=" px-6 py-2 border text-[#fc1056] border-[#fc1056] rounded-lg font-semibold md:self-start">
-                    <a href={item.live_demo}>View Demo</a>
+                <button className=" px-6 py-2 border text-[#fc1056] ease-in-out hover:text-[#fff] hover:border-[#fff] border-[#fc1056] rounded-lg font-semibold md:self-start">
+                    <a href={item.live_demo}>Preview</a>
                 </button>
                 </div>
             </div>

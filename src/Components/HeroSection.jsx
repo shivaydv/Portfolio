@@ -37,14 +37,14 @@ const HeroSection = () => {
           </div>
           <div className="flex gap-8 mt-12 mb-6  md:mt-10 md:mb-10 md:self-start  ">
             <a
-              className=" hover:text-[#fc1056] hover:scale-125 ease-in-out duration-200 "
+              className=" hover:text-[#fc1056] hover:scale-125 ease-in-out duration-200   "
               href="https://github.com/Shivaydv/" target="blank"
             >
               <AiFillGithub size={"2rem"} />
             </a>
             <a
               className=" hover:text-[#fc1056] hover:scale-125 ease-in-out duration-200 "
-              href="https://www.linkedin.com/in/shivay1256/" target="blank"
+              href="https://www.linkedin.com/in/shivaydv/" target="blank"
             >
               <AiFillLinkedin size={"2rem"} />
             </a>
@@ -62,7 +62,7 @@ const HeroSection = () => {
             </a>
             
           </div>
-          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start">
+          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start ease-in-out  hover:bg-[#fc105792]">
             <Link to={"/contact"}>Contact Me</Link>
           </button>
 
