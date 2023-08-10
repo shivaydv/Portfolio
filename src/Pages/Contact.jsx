@@ -7,10 +7,12 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
+import Progressbar from "../Components/Progressbar";
 
 const Contact = () => {
   return (
     <div className="container mx-auto ">
+      <Progressbar/>
       <div className="flex h-96 mt-6 flex-col md:flex-row  ">
         <motion.div initial={{x:"-100px", opacity:0}} animate={{x:"0px",opacity:1}} transition={{duration:1}} className="w-[70%] md:w-1/2 mx-auto ">
           <img className="w-full h-full object-contain " src={me} alt="" />

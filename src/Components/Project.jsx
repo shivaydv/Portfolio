@@ -7,7 +7,7 @@ import todolist_p from "../Assets/todolist-p.png"
 import weather_p from "../Assets/weather-p.png"
 import chat_p from "../Assets/chat-p.png"
 
-import { motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 
 const Project = () => {
 
@@ -15,7 +15,7 @@ const Project = () => {
         id:1,
         name:'Chat App',
         subheading:"MERN Stack Project",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus ex saepe.",
+        description: "User Authentication & Authorization, WebSockets, RealTime Chatting",
         image:{src:chat_p,alt:"Chat App"},
         github_link:"https://github.com/shivaydv/Chat-app",
         live_demo:"https://shivaydv-chat-app.netlify.app/"
@@ -78,32 +78,37 @@ const Project = () => {
 
 
   return (
-    <div className='min-h-screen px-6 md:px-24 space-y-16 mb-16'>
+    <div className='min-h-screen px-6 lg:px-24 space-y-16 mb-16'>
         <h1  className='w-full text-center text-3xl font-bold my-10'>My Projects</h1>
 
     {
         projects.map((item,i)=>{
             return(
-                <div className={`flex flex-col  ${i%2==0 ? "md:flex-row ":"md:flex-row-reverse"} px-3 md:px-8 py-3 md:py-8 bg-[#ffffff1f] rounded-2xl   gap-6  items-center `} key={item.id}>
-            <div className={`w-full md:w-1/2  flex justify-center items-center `}>
+                <motion.div
+                initial={{opacity:0,translateX:`${i%2===0?"300px":"-300px"}`}}
+                whileInView={{opacity:1,translateX:0,scrollBehavior:"smooth"}}
+            
+                transition={{ease:"easeInOut",duration:1,type:"spring"}}
+                 className={`flex flex-col  ${i%2===0 ? "lg:flex-row ":"lg:flex-row-reverse"} px-3 lg:px-8 py-3 lg:py-8 shadow-2xl bg-[#ffffff1f] rounded-2xl   gap-6  items-center `} key={item.id}>
+            <div className={`w-full lg:w-1/2  flex justify-center items-center shadow-2xl `}>
                 <img className='rounded-lg object-cover' src={item.image.src} alt={item.image.alt} />
             </div>
-            <div className=' w-full md:w-1/2 space-y-6  justify-center flex flex-col  '>
+            <div className=' w-full lg:w-1/2 space-y-6  justify-center flex flex-col  '>
                 <div className='space-y-1'>
                 <h1 className='text-3xl font-semibold'>{item.name}</h1>
                 <p className='text-sm text-[#8d8d8d]'>{item.subheading}</p>
                 </div>
                 <p className='text-lg text-[#8d8d8d]'>{item.description}</p>
-                <div className='md:space-x-4 flex justify-evenly w-full md:justify-start '>
-                <button className=" px-6 py-2 bg-[#fc1056] ease-in-out  hover:bg-[#fc105792] border border-[#fc1056] rounded-lg font-semibold md:self-start">
+                <div className='lg:space-x-4 flex justify-evenly w-full lg:justify-start '>
+                <button className=" px-6 py-2 bg-[#fc1056] ease-in-out  hover:bg-[#fc105792] border border-[#fc1056] rounded-lg font-semibold lg:self-start">
                     <a href={item.github_link}>GitHub</a>
                 </button>
-                <button className=" px-6 py-2 border text-[#fc1056] ease-in-out hover:text-[#fff] hover:border-[#fff] border-[#fc1056] rounded-lg font-semibold md:self-start">
+                <button className=" px-6 py-2 border text-[#fc1056] ease-in-out hover:text-[#fff] hover:border-[#fff] border-[#fc1056] rounded-lg font-semibold lg:self-start">
                     <a href={item.live_demo}>Preview</a>
                 </button>
                 </div>
             </div>
-        </div>
+        </motion.div>
             )
         })
     }
