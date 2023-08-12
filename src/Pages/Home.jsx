@@ -3,6 +3,7 @@ import HeroSection from "../Components/HeroSection";
 import Project from "../Components/Project";
 
 import GoToTop from "../Components/GoToTop";
+import Skills from "../Components/Skills";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <GoToTop/>
       <HeroSection/>
       <Project/>
+      <Skills/>
     </div>
   );
 };

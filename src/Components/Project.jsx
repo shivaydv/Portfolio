@@ -85,7 +85,7 @@ const Project = () => {
         projects.map((item,i)=>{
             return(
                 <motion.div
-                initial={{opacity:0,translateX:`${i%2===0?"300px":"-300px"}`}}
+                initial={{opacity:0,translateX:`${i%2===0?"600px":"-600px"}`}}
                 whileInView={{opacity:1,translateX:0,scrollBehavior:"smooth"}}
             
                 transition={{ease:"easeInOut",duration:1,type:"spring"}}

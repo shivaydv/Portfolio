@@ -8,7 +8,7 @@ import Progressbar from "./Components/Progressbar"
 const App = () => {
   return (
     <Router>
-      <Progressbar/>
+      {/* <Progressbar/> */}
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>} />
