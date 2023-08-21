@@ -4,6 +4,24 @@ import { projects } from "../Data/data";
 
 import { motion } from "framer-motion";
 
+const fadein ={
+  initial:{
+    opacity:0,
+    y:200,
+  },
+  animate:(index)=>({
+    opacity:1,
+    y:0,
+
+    transition:{
+      duration:0.6,
+      delay:0.0*index,
+    }
+  })
+} 
+
+
+
 const Project = () => {
   return (
     <div className="min-h-screen px-6  space-y-16 mb-16 w-full ">
@@ -12,9 +30,9 @@ const Project = () => {
       </h1>
 
       <div className="flex flex-wrap  w-full justify-center  gap-16">
-        {projects.map((item) => {
+        {projects.map((item,i) => {
           return (
-            <div class="max-w-sm   bg-[#fff]/10 shadow-2xl    rounded-xl ">
+            <motion.div  variants={fadein} initial="initial" whileInView="animate" viewport={{once:true}} custom={i}  class="max-w-sm   bg-[#fff]/10 shadow-2xl    rounded-xl ">
               
                 <img
                   class="rounded-t-lg"
@@ -41,7 +59,7 @@ const Project = () => {
                 <button className="hover:scale-105  duration-100 px-6 py-2 text-[#fc1056] ease-in-out   border border-[#fc1056] rounded-lg font-semibold "><a href={item.live_demo}>Demo</a></button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

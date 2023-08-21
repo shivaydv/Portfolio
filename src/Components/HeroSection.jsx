@@ -12,7 +12,7 @@ import {
 import Particle from './Particle';
 const HeroSection = () => {
   return (
-    <div className="flex flex-col  p-4  lg:flex-row justify-center items-center h-[82vh]  ">
+    <div className="flex flex-col  p-4  lg:flex-row justify-center items-center md:h-[82vh]  ">
       <Particle/>
 
         <motion.div 

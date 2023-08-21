@@ -7,9 +7,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Footer from './Components/Footer'
 
 const App = () => {
-  useEffect(()=>{
-    const locomotiveScroll = new LocomotiveScroll();
-  })
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <Router>
 
