@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import Home from './Pages/Home'
 import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
-import Progressbar from "./Components/Progressbar"
+import LocomotiveScroll from 'locomotive-scroll';
+import Footer from './Components/Footer'
 
 const App = () => {
+  useEffect(()=>{
+    const locomotiveScroll = new LocomotiveScroll();
+  })
   return (
     <Router>
-      {/* <Progressbar/> */}
+
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/contact' element={<Contact/>} />
+      <Route path='/*' element={<div className='h-[75vh] flex justify-center items-center text-2xl'>404 : Page Not Found</div>} />
       </Routes>
+     
     </Router>
     
   )

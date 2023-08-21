@@ -11,15 +11,15 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto h-[85vh] md:h-[75vh] ">
  
-      <div className="flex h-96 mt-6 flex-col md:flex-row  ">
+      <div className="flex h-96  flex-col md:flex-row md:pt-6  ">
         <motion.div initial={{x:"-100px", opacity:0}} animate={{x:"0px",opacity:1}} transition={{duration:1}} className="w-[70%] md:w-1/2 mx-auto ">
           <img className="w-full h-full object-contain " src={me} alt="" />
         </motion.div>
 
         <motion.div initial={{x:"100px", opacity:0}} animate={{x:"0px",opacity:1}} transition={{duration:1}} className=" w-full  md:w-1/2 h-full  p-12 text-center md:text-left ">
-          <h1 className="text-4xl font-semibold md:w-full  ">Contact Me</h1>
+          <h1 className="text-4xl font-semibold md:w-full   ">Contact Me</h1>
           <p className="text-[#8d8d8d] text-lg font-semibold py-2">You can contact me at the places mentioned below. I will try to get back to you as fast as I can.</p>
 
           <div className="flex my-10 justify-around md:justify-normal md:gap-8   ">
@@ -48,10 +48,10 @@ const Contact = () => {
               <AiFillTwitterCircle size={"2rem"} />
             </a>
           </div>
-          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start mr-8">
+          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start mr-8 hover:bg-transparent hover:text-[#fc1056] ease-in-out duration-75 border border-[#fc1056]">
           <a href = "mailto: shivaydv1256@gmail.com">Send Email</a>
           </button>
-          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start">
+          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold md:self-start  hover:bg-transparent hover:text-[#fc1056] ease-in-out duration-75 border border-[#fc1056]">
           <a href="tel:726-885-4798">Call</a>
           </button>
           

@@ -1,27 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink ,Link } from 'react-router-dom'
-import {motion} from "framer-motion"
+import resume from "../Assets/Resume.pdf"
+import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai"
 
 const Navbar = () => {
+
+  const [menu,setMenu]=useState(false)
+
+  const toggleMenu=()=>{
+    setMenu(!menu);
+  }
+
   return (
 
-    <motion.nav 
-    
-    // initial={{ y:"-80px",opacity:0 }}
-    // animate={{ y:"0px",opacity:1 }}
-    // transition={{ duration: 1 }} 
-    className='container mx-auto p-6 flex items-center text-white justify-between  '>
+    <nav 
+    className='w-full mx-auto p-6 flex items-center text-white justify-between  '>
         
-            <h1 className=' p-2 font-semibold text-2xl '><Link to={"/"}>Shiva</Link></h1>
+        <h1 className=' p-2 font-semibold text-2xl '><Link to={"/"}>Shiva</Link></h1>
         
-        <div className='hidden  lg:flex gap-24 font-semibold '>
-            <NavLink className={({ isActive }) =>isActive ? 'text-[#fc1056] ' : ''} to={"/"}>Home</NavLink>
-            <NavLink className={({ isActive }) =>isActive ? 'text-[#fc1056]' : ''}  to={"/about"}>About</NavLink>
+        <div onClick={toggleMenu}  className={`flex font-semibold lg:flex lg:gap-24  ${menu?"max-lg:absolute max-lg:flex-col max-lg:text-center max-lg:bg-white max-lg:text-[#1d1d1d] max-lg:rounded-lg max-lg:p-4 max-lg:z-20 max-lg:shadow-xl max-lg:gap-2 right-6 top-[10%]":"hidden"} `}>
+            <NavLink className={({ isActive }) =>isActive ? 'text-[#fc1056]' : ''} to={"/"}>Home</NavLink>
             <NavLink className={({ isActive }) =>isActive ? 'text-[#fc1056]' : ''}  to={"/contact"}>Contact</NavLink>
-            <NavLink className={({ isActive }) =>isActive ? 'text-[#fc1056]' : ''}  to={"/services"}>Services</NavLink>
         </div>
-        <div><button className=' p-2 bg-[#fc1056] rounded-lg font-semibold'>Resume</button></div>
-    </motion.nav>
+        <div className='flex justify-between items-center gap-4'>
+        <a  href={resume} download><button className=' py-1 px-2 bg-[#fc1056] rounded-lg font-semibold  hover:bg-transparent hover:text-[#fc1056] ease-in-out duration-75 border border-[#fc1056]'>Resume</button></a>
+        
+          <button className='lg:hidden' onClick={toggleMenu}>{menu?<AiOutlineClose size={24}/>:<AiOutlineMenu size={24} />}</button>
+
+        </div>
+    </nav>
   
   )
 }

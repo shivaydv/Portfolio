@@ -62,7 +62,7 @@ const HeroSection = () => {
             </a>
             
           </div>
-          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold lg:self-start ease-in-out  hover:bg-[#fc105792]">
+          <button className=" px-6 py-2 bg-[#fc1056] rounded-lg font-semibold lg:self-start hover:bg-transparent hover:text-[#fc1056] ease-in-out duration-75 border border-[#fc1056]">
             <Link to={"/contact"}>Contact Me</Link>
           </button>
 
