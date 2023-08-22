@@ -14,8 +14,8 @@ const fadein ={
     y:0,
 
     transition:{
-      duration:0.6,
-      delay:0.0*index,
+      duration:0.4,
+      delay:0.1*index,
     }
   })
 } 
@@ -32,25 +32,25 @@ const Project = () => {
       <div className="flex flex-wrap  w-full justify-center  gap-16">
         {projects.map((item,i) => {
           return (
-            <motion.div  variants={fadein} initial="initial" whileInView="animate" viewport={{once:true}} custom={i}  class="max-w-sm   bg-[#fff]/10 shadow-2xl    rounded-xl ">
+            <motion.div key={item.id}  variants={fadein} initial="initial" whileInView="animate" viewport={{once:true}} custom={i}  className="max-w-sm   bg-[#fff]/10 shadow-2xl    rounded-xl ">
               
                 <img
-                  class="rounded-t-lg"
+                  className="rounded-t-lg"
                   src={item.image.src}
                   alt={item.image.alt}
                 />
               
-              <div class="p-5">
+              <div className="p-5">
                 <div>
-                  <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">
+                  <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white">
                    {item.name}
                   </h5>
-                  <h5 class="mb-4 text-sm font-semibold tracking-tight text-gray-400">
+                  <h5 className="mb-4 text-sm font-semibold tracking-tight text-gray-400">
                    {item.subheading}
                   </h5>
                 </div>
                 
-                <p class="mb-4 font-normal text-gray-400">
+                <p className="mb-4 font-normal text-gray-400">
                  {item.description}
                 </p>
                 

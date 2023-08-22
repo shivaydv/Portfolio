@@ -10,7 +10,7 @@ import Footer from "../Components/Footer";
 const Home = () => {
 
   return (
-    <div className="w-full mx-auto overflow-x-hidden pt-4 ">
+    <div className="w-full mx-auto overflow-x-hidden pt-4 overflow-hidden">
       <GoToTop/>
       <HeroSection/>
       <Skills/>
