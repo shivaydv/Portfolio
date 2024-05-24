@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <div className="w-full pt-28 pb-10 md:pt-40 md:pb-20 max-h-[100dvh]">
+    <div className="w-full pt-28 pb-10 md:pt-40 md:pb-20 max-h-[100dvh] mb-20">
       <div className="grid grid-cols-1 gap-10 sm:gap-16 md:gap-10  items-center md:grid-cols-2 ">
         <div className="flex flex-col ">
           <div className="space-y-2">
