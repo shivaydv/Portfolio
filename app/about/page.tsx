@@ -30,7 +30,7 @@ const page = () => {
           </div>
 
           <p className="md:font-semibold text-center ">
-            Hi there! I'm Shiva Yadav, a self-taught web developer passionate
+            Hi there! I am Shiva Yadav, a self-taught web developer passionate
             about building awesome websites. I focus on creating modern websites
             that work well on any device.
           </p>

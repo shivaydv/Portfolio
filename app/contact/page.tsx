@@ -24,7 +24,7 @@ const page = () => {
                 </h4>
                 <p className=" text-lg leading-relaxed tracking-tight text-muted-foreground max-w-sm text-left">
                   Whether you have a question, want to collaborate, or just want
-                  to say hi, feel free to reach out. I'll get back to you as
+                  to say hi, feel free to reach out. I will get back to you as
                   soon as possible!
                 </p>
               </div>

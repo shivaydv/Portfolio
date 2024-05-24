@@ -22,7 +22,7 @@ export const Hero = () => {
 
           <p className="md:text-lg leading-relaxed tracking-tight text-muted-foreground sm:max-w-md text-left py-4 ">
             I specialize in building web applications with modern technologies
-            and frameworks. Let's collaborate and create something extraordinary
+            and frameworks. Let&apos;s collaborate and create something extraordinary
             together.
           </p>
 

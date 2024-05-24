@@ -8,7 +8,7 @@ const Logos = () => {
       <div className="mx-auto w-full ">
         <div className="flex flex-col gap-5 items-center justify-center w-full ">
           <h3 className="heading-1 max-md:w-full">
-            Technologies I've Worked With
+            Technologies I&apos;ve Worked With
           </h3>
           <div className="mx-auto w-full px-4 md:px-0 ">
             <div
