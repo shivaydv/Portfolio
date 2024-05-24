@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Inter as FontSans } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -64,6 +66,8 @@ export default function RootLayout({
             <Footer />
           </main>
         </ThemeProvider>
+        <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );

@@ -94,7 +94,7 @@ export const projectdata: projectDataProps[] = [
   {
     title: "Portfolio-1",
     github: "https://github.com/shivaydv/1-portfolio",
-    link: "https://shivayadav.tech/",
+    link: "https://shivaydv-portfolio.vercel.app/",
     src: "/Projects/portfolio-1.png",
     description: `Minimal NextJS Portfolio website with 3d animations.`,
     category: ["Portfolio"],
