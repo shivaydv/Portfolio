@@ -28,6 +28,14 @@ export const categoryList: string[] = [
 
 export const projectdata: projectDataProps[] = [
   {
+    title: "Blog with Admin Panel",
+    github: "https://github.com/shivaydv/blog",
+    link: "https://shivayadav-blog.vercel.app",
+    src: "/Projects/blog.png",
+    description: `It's a blog website with admin panel. It has the functionality to add blog posts and also the user can bookmark the posts.`,
+    category: ["Fullstack", "Featured"],
+  },
+  {
     title: "AI Image Generator",
     github: "https://github.com/shivaydv/Ai-image-gen",
     link: "https://ai-shivaydv.vercel.app/",
@@ -49,7 +57,7 @@ export const projectdata: projectDataProps[] = [
     link: "https://sy-crypto.netlify.app/coins",
     src: "/Projects/crypto.png",
     description: `It shows the current price and other stats of the crypto currency. It also list the top 1000 crypto currencies and and 100 marketplaces available around the globe.`,
-    category: ["Frontend", "Featured"],
+    category: ["Frontend", ],
   },
   {
     title: "To Do App",
@@ -65,7 +73,7 @@ export const projectdata: projectDataProps[] = [
     link: "https://sy-ecom.netlify.app/",
     src: "/Projects/cart.png",
     description: `Its a simple shopping cart app that allows you to add and remove items from the cart. It also shows the total amount of the items in the cart.`,
-    category: ["Frontend", "Featured"],
+    category: ["Frontend",],
   },
   {
     title: "Tesla Clone",
@@ -89,7 +97,7 @@ export const projectdata: projectDataProps[] = [
     link: "https://aspartinx.vercel.app/",
     src: "/Projects/aspartinx.png",
     description: `An Agency website with a minimal design and smooth scroll effect and a contact form which send message directly to the email.`,
-    category: ["Frontend"],
+    category: ["Frontend", "Featured"],
   },
   {
     title: "Portfolio-1",
