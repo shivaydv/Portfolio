@@ -4,7 +4,7 @@ import React from "react";
 
 const Logos = () => {
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-12 ">
       <div className="mx-auto w-full ">
         <div className="flex flex-col gap-5 items-center justify-center w-full ">
           <h3 className="heading-1 max-md:w-full">

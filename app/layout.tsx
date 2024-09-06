@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Inter as FontSans } from "next/font/google";
+import { Inter  } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const fontSans = FontSans({
+const fontSans = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--inter-sans",
 });
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       alt: 'Preview image for Shiva Yadav',
     }
   },
-  
+
 };
 
 export default function RootLayout({

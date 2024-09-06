@@ -77,12 +77,12 @@ const config = {
         },
       },
       animation: {
-        'logo-cloud': 'logo-cloud 30s linear infinite', 
+        'logo-cloud': 'logo-cloud 30s linear infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--inter-sans)", ...fontFamily.sans],
       },
     },
   },
@@ -94,7 +94,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
